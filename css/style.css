@@ -514,17 +514,16 @@ button {
 /* Grid */
 
 .grid {
-  /* background: lightblue; */
   display: grid;
-
-  grid-template-columns: repeat(3, minmax(10px, 1fr));
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2%;
   margin: 30px;
 }
 
 .grid div {
 
+  aspect-ratio: 2 / 1;
 
 }
 
@@ -551,8 +550,3 @@ button {
 }
 
 
-@media (max-width: 400px) {
-  .grid {
-      grid-template-columns: 1fr;
-  }
-}
