@@ -508,3 +508,48 @@ button {
   width: 100%;
   /* The width is the width of the web page */
 }
+
+
+/* Grid */
+
+.grid {
+  /* background: lightblue; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin: 30px;
+}
+
+.grid div {
+  background: white;
+}
+
+
+.grid .img_cover {
+  position: relative;
+  width: 100%;
+}
+
+.grid .img_cover::after{
+  display: block;
+  content: "";
+  padding-bottom: 100%;
+}
+
+.grid img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+
+@media (max-width: 400px) {
+  .grid {
+      grid-template-columns: 1fr;
+  }
+}
