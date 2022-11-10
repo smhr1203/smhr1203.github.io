@@ -1,40 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <link rel="stylesheet" href="css/gridcss.css">
-</head>
-
-<body>
-    <main class="contents">
-        <!-- 클릭할 이미지 리스트 -->
-        <div class="imgList">
-            <div class="imgC">
-                <img src="img/photo/smhr1.jpg" class="img">
-            </div>
-            <div class="imgC">
-                <img src="img/photo/smhr2.jpg" class="img">
-            </div>
-            <div class="imgC">
-                <img src="img/photo/smhr3.jpg" class="img">
-            </div>
-            <div class="imgC">
-                <img src="img/photo/smhr4.jpg" class="img">
-            </div>
-
-
-        <!-- 팝업 될 곳 -->
-        <div class="modal">
-            <button>&times;</button>
-            <div class="modalBox">
-                <img src="" alt="">
-                <p></p>
-            </div>
-        </div>
-    </main>
-</body>
-
-<script>
 $(function(){
   // 	이미지 클릭시 해당 이미지 모달
     $(".imgC").click(function(){
@@ -67,6 +30,3 @@ $(function(){
       }
     });
   });
-</script>
-
-</html>
