@@ -60,39 +60,46 @@
             <br>
             <div class="grid">
                 <div class="img_cover">
-                    <img class="img" src="img/photo/smhr1.jpg" alt="수민혜란_1">
+                    <img class="img" id="grid_img01" src="img/photo/smhr1.jpg" alt="수민혜란_1" onclick="javascript:showModal(this);">
                 </div>
                 <div class="img_cover">
-                    <img class="img" src="img/photo/smhr2.jpg" alt="수민혜란_2">
+                    <img class="img" id="grid_img02" src="img/photo/smhr2.jpg" alt="수민혜란_2" onclick="javascript:showModal(this);">
                 </div>
                 <div class="img_cover">
-                    <img class="img" src="img/photo/smhr3.jpg" alt="수민혜란_3">
+                    <img class="img" id="grid_img03" src="img/photo/smhr3.jpg" alt="수민혜란_3" onclick="javascript:showModal(this);">
                 </div>
                 <div class="img_cover">
-                    <img class="img" src="img/photo/smhr4.jpg" alt="수민혜란_4">
+                    <img class="img" id="grid_img04" src="img/photo/smhr4.jpg" alt="수민혜란_4" onclick="javascript:showModal(this);">
                 </div>
                 <div class="img_cover">
-                    <img class="img" src="img/photo/smhr5.jpg" alt="수민혜란_5">
+                    <img class="img" id="grid_img05" src="img/photo/smhr5.jpg" alt="수민혜란_5" onclick="javascript:showModal(this);">
                 </div>
                 <div class="img_cover">
-                    <img class="img" src="img/photo/smhr6.jpg" alt="수민혜란_6">
+                    <img class="img" id="grid_img06" src="img/photo/smhr6.jpg" alt="수민혜란_6" onclick="javascript:showModal(this);">
                 </div>
                 <div class="img_cover">
-                    <img class="img" src="img/photo/smhr7.jpg" alt="수민혜란_7">
+                    <img class="img" id="grid_img07" src="img/photo/smhr7.jpg" alt="수민혜란_7" onclick="javascript:showModal(this);">
                 </div>
                 <div class="img_cover">
-                    <img class="img" src="img/photo/smhr8.jpg" alt="수민혜란_8">
+                    <img class="img" id="grid_img08" src="img/photo/smhr8.jpg" alt="수민혜란_8" onclick="javascript:showModal(this);">
                 </div>
                 <div class="img_cover">
-                    <img class="img" src="img/photo/smhr9.jpg" alt="수민혜란_9">
+                    <img class="img" id="grid_img09" src="img/photo/smhr9.jpg" alt="수민혜란_9" onclick="javascript:showModal(this);">
                 </div>
                 <div class="img_cover">
-                    <img class="img" src="img/photo/smhr10.jpg" alt="수민혜란_10">
+                    <img class="img" id="grid_img10" src="img/photo/smhr10.jpg" alt="수민혜란_10" onclick="javascript:showModal(this);">
                 </div>
                 <div class="img_cover">
-                    <img class="img" src="img/photo/smhr11.jpg" alt="수민혜란_11">
+                    <img class="img" id="grid_img11" src="img/photo/smhr11.jpg" alt="수민혜란_11" onclick="javascript:showModal(this);">
                 </div>
+            </div>
 
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
             </div>
             <br><br>
         </section>
@@ -358,6 +365,31 @@
         });
         }
 
+        //모달
+
+        // 모달용
+        let modal = document.getElementById("myModal");
+
+        // 클릭된 이미지를 매개변수로 하는 showModal 함수
+        // 숨겨진 div를 띄워서 이미지를 집어넣습니다.
+        function showModal(param){
+            
+            let modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = param.src;
+        }
+
+        let span = document.getElementsByClassName("close")[0];
+
+        // 닫기 버튼 누르면 닫힙니다.
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+
+        // 모달 배경 눌러도 닫힙니다.
+        modal.onclick = function() {
+            modal.style.display = "none";
+        }
 
     </script>
 </body>
